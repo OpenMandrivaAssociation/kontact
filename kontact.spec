@@ -41,7 +41,6 @@ proven KDE applications under one roof. Thanks to the powerful KParts
 technology, existing applications are seamlessly integrated into one.
 
 %files -f %{name}.lang
-%{_kde5_applicationsdir}/kontact-admin.desktop
 %{_kde5_applicationsdir}/org.kde.kontact.desktop
 %{_bindir}/kontact
 %{_datadir}/config.kcfg/kontact.kcfg
@@ -49,7 +48,6 @@ technology, existing applications are seamlessly integrated into one.
 %{_datadir}/messageviewer/about/default/introduction_kontact.html
 %{_datadir}/messageviewer/about/default/loading_kontact.html
 %{_docdir}/*/*/kontact
-%{_docdir}/*/*/kontact-admin
 %{_iconsdir}/hicolor/*/apps/kontact.*
 %{_kde5_services}/kontactconfig.desktop
 %{_sysconfdir}/xdg/kontact.categories
