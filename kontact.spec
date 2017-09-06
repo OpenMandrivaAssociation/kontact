@@ -1,6 +1,6 @@
 Summary:	KDE kontact container
 Name:		kontact
-Version:	17.08.0
+Version:	17.08.1
 Release:	1
 Epoch:		3
 License:	GPLv2+
