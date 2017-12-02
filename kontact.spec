@@ -1,6 +1,6 @@
 Summary:	KDE kontact container
 Name:		kontact
-Version:	17.08.3
+Version:	17.11.90
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -52,7 +52,6 @@ technology, existing applications are seamlessly integrated into one.
 %{_kde5_services}/kontactconfig.desktop
 %{_sysconfdir}/xdg/kontact.categories
 %{_sysconfdir}/xdg/kontact.renamecategories
-%{_kde5_xmlguidir}/kontact/kontactui.rc
 %{_datadir}/metainfo/org.kde.kontact.appdata.xml
 %{_qt5_plugindir}/kcm_kontact.so
 
