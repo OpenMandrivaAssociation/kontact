@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kontact-17.12.1.tar.xz: 5577af7355243b80fb46d7cab16775d88bc55a61
+sources:
+  kontact-17.12.2.tar.xz: 528755d61b0ad6a769df99dfa4d2426abeb427a3
