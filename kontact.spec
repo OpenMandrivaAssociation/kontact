@@ -2,7 +2,7 @@
 
 Summary:	KDE kontact container
 Name:		kontact
-Version:	19.07.80
+Version:	19.07.90
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -56,6 +56,7 @@ technology, existing applications are seamlessly integrated into one.
 %{_datadir}/qlogging-categories5/kontact.renamecategories
 %{_datadir}/metainfo/org.kde.kontact.appdata.xml
 %{_qt5_plugindir}/kcm_kontact.so
+%{_datadir}/dbus-1/services/org.kde.kontact.service
 
 #----------------------------------------------------------------------------
 
