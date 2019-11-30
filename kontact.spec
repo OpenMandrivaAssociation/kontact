@@ -2,7 +2,7 @@
 
 Summary:	KDE kontact container
 Name:		kontact
-Version:	19.11.80
+Version:	19.11.90
 Release:	1
 Epoch:		3
 License:	GPLv2+
