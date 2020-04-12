@@ -9,6 +9,7 @@ License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		kontact-20.03.90-qt-5.15.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt5DBus)
 BuildRequires:	pkgconfig(Qt5Widgets)
@@ -76,7 +77,7 @@ KDE PIM shared library.
 #----------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 %cmake_kde5
 
 %build
