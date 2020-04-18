@@ -2,14 +2,13 @@
 
 Summary:	KDE kontact container
 Name:		kontact
-Version:	20.03.90
-Release:	2
+Version:	20.04.0
+Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
-Patch0:		kontact-20.03.90-qt-5.15.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt5DBus)
 BuildRequires:	pkgconfig(Qt5Widgets)
