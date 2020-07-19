@@ -2,7 +2,7 @@
 
 Summary:	KDE kontact container
 Name:		kontact
-Version:	20.04.3
+Version:	20.07.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -25,7 +25,7 @@ BuildRequires:	cmake(KF5Akonadi)
 BuildRequires:	cmake(KF5KontactInterface)
 BuildRequires:	cmake(KF5Libkdepim)
 BuildRequires:	cmake(KF5GrantleeTheme)
-BuildRequires:	cmake(KF5KdepimDBusInterfaces)
+BuildRequires:	cmake(KF5PimCommonAkonadi)
 BuildRequires:	sasl-devel
 BuildRequires:	boost-devel
 Requires:	kdepim-runtime
