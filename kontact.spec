@@ -2,7 +2,7 @@
 
 Summary:	KDE kontact container
 Name:		kontact
-Version:	21.04.1
+Version:	21.04.2
 Release:	1
 Epoch:		3
 License:	GPLv2+
