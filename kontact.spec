@@ -2,7 +2,7 @@
 
 Summary:	KDE kontact container
 Name:		kontact
-Version:	21.08.3
+Version:	21.12.0
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -46,7 +46,6 @@ technology, existing applications are seamlessly integrated into one.
 %{_kde5_applicationsdir}/org.kde.kontact.desktop
 %{_bindir}/kontact
 %{_datadir}/config.kcfg/kontact.kcfg
-%{_datadir}/kconf_update/kontact*
 %{_datadir}/messageviewer/about/default/introduction_kontact.html
 %{_datadir}/messageviewer/about/default/loading_kontact.html
 %{_docdir}/*/*/kontact
@@ -55,8 +54,8 @@ technology, existing applications are seamlessly integrated into one.
 %{_datadir}/qlogging-categories5/kontact.categories
 %{_datadir}/qlogging-categories5/kontact.renamecategories
 %{_datadir}/metainfo/org.kde.kontact.appdata.xml
-%{_qt5_plugindir}/kcm_kontact.so
 %{_datadir}/dbus-1/services/org.kde.kontact.service
+%{_libdir}/qt5/plugins/pim/kcms/kontact/kcm_kontact.so
 
 #----------------------------------------------------------------------------
 
