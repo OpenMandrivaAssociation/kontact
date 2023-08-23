@@ -2,7 +2,7 @@
 
 Summary:	KDE kontact container
 Name:		kontact
-Version:	23.04.3
+Version:	23.08.0
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -21,11 +21,11 @@ BuildRequires:	cmake(KF5Crash)
 BuildRequires:	cmake(KF5WindowSystem)
 BuildRequires:	cmake(KF5IconThemes)
 BuildRequires:	cmake(KF5PimTextEdit)
-BuildRequires:	cmake(KF5Akonadi)
-BuildRequires:	cmake(KF5KontactInterface)
-BuildRequires:	cmake(KF5Libkdepim)
-BuildRequires:	cmake(KF5GrantleeTheme)
-BuildRequires:	cmake(KF5PimCommonAkonadi)
+BuildRequires:	cmake(KPim5Akonadi)
+BuildRequires:	cmake(KPim5KontactInterface)
+BuildRequires:	cmake(KPim5Libkdepim)
+BuildRequires:	cmake(KPim5GrantleeTheme)
+BuildRequires:	cmake(KPim5PimCommonAkonadi)
 BuildRequires:	sasl-devel
 BuildRequires:	boost-devel
 Requires:	kdepim-runtime
