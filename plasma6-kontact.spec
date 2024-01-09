@@ -4,7 +4,6 @@ Summary:	KDE kontact container
 Name:		plasma6-kontact
 Version:	24.01.85
 Release:	1
-Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
@@ -12,7 +11,7 @@ Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kontac
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt6DBus)
 BuildRequires:	pkgconfig(Qt6Widgets)
-BuildRequires:	pkgconfig(Qt6WebEngine)
+BuildRequires:	pkgconfig(Qt6WebEngineCore)
 BuildRequires:	pkgconfig(Qt6WebEngineWidgets)
 BuildRequires:	cmake(KF6DBusAddons)
 BuildRequires:	cmake(KF6DocTools)
@@ -20,7 +19,7 @@ BuildRequires:	cmake(KF6KCMUtils)
 BuildRequires:	cmake(KF6Crash)
 BuildRequires:	cmake(KF6WindowSystem)
 BuildRequires:	cmake(KF6IconThemes)
-BuildRequires:	cmake(KF6PimTextEdit)
+BuildRequires:	cmake(KPim6TextEdit)
 BuildRequires:	cmake(KPim6Akonadi)
 BuildRequires:	cmake(KPim6KontactInterface)
 BuildRequires:	cmake(KPim6Libkdepim)
@@ -42,8 +41,8 @@ The KDE Kontact Personal Information Management suite unites mature and
 proven KDE applications under one roof. Thanks to the powerful KParts
 technology, existing applications are seamlessly integrated into one.
 
-%files -f %{name}.lang
-%{_kde6_applicationsdir}/org.kde.kontact.desktop
+%files -f kontact.lang
+%{_datadir}/applications/org.kde.kontact.desktop
 %{_bindir}/kontact
 %{_datadir}/config.kcfg/kontact.kcfg
 %{_datadir}/messageviewer/about/default/introduction_kontact.html
@@ -59,7 +58,7 @@ technology, existing applications are seamlessly integrated into one.
 #----------------------------------------------------------------------------
 
 %define kontactprivate_major 6
-%define libkontactprivate %mklibname kontactprivate %{kontactprivate_major}
+%define libkontactprivate %mklibname kontactprivate
 
 %package -n %{libkontactprivate}
 Summary:	KDE PIM shared library
@@ -70,11 +69,12 @@ KDE PIM shared library.
 
 %files -n %{libkontactprivate}
 %{_libdir}/libkontactprivate.so.%{kontactprivate_major}*
+%{_libdir}/libkontactprivate.so.5*
 
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n kontact-%{version}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
@@ -85,4 +85,4 @@ KDE PIM shared library.
 %install
 %ninja_install -C build
 
-%find_lang %{name}
+%find_lang kontact
