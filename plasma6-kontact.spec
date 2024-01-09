@@ -28,14 +28,14 @@ BuildRequires:	cmake(KPim6GrantleeTheme)
 BuildRequires:	cmake(KPim6PimCommonAkonadi)
 BuildRequires:	sasl-devel
 BuildRequires:	boost-devel
-Requires:	kdepim-runtime
-Suggests:	kdepim-addons
-Suggests:	akonadi-import-wizard
-Suggests:	akregator
-Suggests:	kaddressbook
-Suggests:	kmail
-Suggests:	knotes
-Suggests:	korganizer
+Requires:	plasma6-kdepim-runtime
+Suggests:	plasma6-kdepim-addons
+Suggests:	plasma6-akonadi-import-wizard
+Suggests:	plasma6-akregator
+Suggests:	plasma6-kaddressbook
+Suggests:	plasma6-kmail
+Suggests:	plasma6-knotes
+Suggests:	plasma6-korganizer
 
 %description
 The KDE Kontact Personal Information Management suite unites mature and
