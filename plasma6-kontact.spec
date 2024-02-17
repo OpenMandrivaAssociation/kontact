@@ -1,13 +1,20 @@
+%define git 20240217
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Summary:	KDE kontact container
 Name:		plasma6-kontact
-Version:	24.01.95
-Release:	1
+Version:	24.01.96
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/pim/kontact/-/archive/%{gitbranch}/kontact-%{gitbranchd}.tar.bz2#/kontact-%{git}.tar.bz2
+%else
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kontact-%{version}.tar.xz
+%endif
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt6DBus)
 BuildRequires:	pkgconfig(Qt6Widgets)
@@ -70,12 +77,11 @@ KDE PIM shared library.
 
 %files -n %{libkontactprivate}
 %{_libdir}/libkontactprivate.so.%{kontactprivate_major}*
-%{_libdir}/libkontactprivate.so.5*
 
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n kontact-%{version}
+%autosetup -p1 -n kontact-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
