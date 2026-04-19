@@ -5,7 +5,7 @@
 
 Summary:	KDE kontact container
 Name:		kontact
-Version:	25.12.3
+Version:	26.04.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
